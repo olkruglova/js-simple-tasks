@@ -11,8 +11,7 @@ btn.onclick = function(){
     number3 = parseInt(number3);
     var result = number1 + number2 + number3;
     results.value = result;
-    console.log(number1);
-    console.log(number2);
-    console.log(number3);
-    console.log(result);
+
+    var sum = document.querySelector('#result');
+    sum.innerHTML = '<h3><b>Twój wynik</b>: ' + result +'</h3>';
 }
