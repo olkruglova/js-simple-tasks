@@ -83,3 +83,20 @@ form3.addEventListener("blur", function() {
     form3.value = names;
 
 }, true);
+
+/*
+task6: Дан инпут. В него вводится текст. По потери фокуса узнайте количество слов в этом тексте.
+*/
+var text = document.querySelector(".input8");
+text.addEventListener("blur", function() {
+    var txt = text.value;
+    txt = txt.split(' ');
+    console.log(txt)
+    var res = 0;
+    for(var i=0; i<txt.length; i++){
+        res += 1;
+        console.log(res)
+    }
+    var wyn = document.querySelector('#result5');
+    wyn.innerHTML = '<h3><b>Ilość słów w tekście</b>: ' + res +'</h3>';
+}, true);

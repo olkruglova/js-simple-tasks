@@ -8,6 +8,9 @@ hr {
     width: 250px;
     margin-bottom:15px;
 }
+textarea {
+    width: 400px;
+}
 .name, .name-output1, .name-output2{
     display: inline;
 }
