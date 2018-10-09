@@ -67,3 +67,19 @@ form2.addEventListener("blur", function() {
     var lastName = document.querySelector('.name-output2');
     lastName.value = names[1];
 }, true);
+/*
+task5: Дан инпут. В него вводится ФИО через пробел. ФИО вводится с маленькой буквы. Сделайте так, чтобы по потери фокуса инпутом, введенные фамилия, имя и отчество автоматически стали записанными с большой буквы (в том же инпуте).
+*/
+var form3 = document.querySelector(".input7");
+form3.addEventListener("blur", function() {
+    var names = form3.value;
+    var arr = names.split(' ');
+    for (var i=0; i<arr.length; i++) {
+        arr[i] = arr[i].split('');
+        arr[i][0] = arr[i][0].toUpperCase();
+        arr[i] = arr[i].join('');
+    }
+    names = arr.join(' ');
+    form3.value = names;
+
+}, true);
