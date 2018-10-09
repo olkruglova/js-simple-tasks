@@ -54,3 +54,16 @@ form.addEventListener("blur", function() {
     var wyn = document.querySelector('#result3');
     wyn.innerHTML = '<h3><b>Twój wynik</b>: ' + res +'</h3>';
 }, true);
+
+/*
+task4: Дан инпут. В него вводится ФИО через пробел. По потери фокуса запишите фамилию, имя и отчество в отдельные инпуты.
+*/
+var form2 = document.querySelector(".input6");
+form2.addEventListener("blur", function() {
+    var names = form2.value;
+    names = names.split(' ');
+    var firstName = document.querySelector('.name-output1');
+    firstName.value = names[0];
+    var lastName = document.querySelector('.name-output2');
+    lastName.value = names[1];
+}, true);

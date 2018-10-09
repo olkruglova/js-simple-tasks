@@ -1,6 +1,13 @@
-#task1, #task2, #task3 {
+#task1, #task2, #task3, #task4 {
     margin-left: 20px;
 }
 hr {
     margin-top:30px;
+}
+.input6{
+    width: 250px;
+    margin-bottom:15px;
+}
+.name, .name-output1, .name-output2{
+    display: inline;
 }
