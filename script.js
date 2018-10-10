@@ -109,7 +109,6 @@ text2.addEventListener("blur", function() {
     var txt = text2.value;
     txt = txt.split(' ');
     console.log(txt);
-    var longestWord;
     var max = 0;
     for(var i=0; i<txt.length; i++){
         var num = 0;
@@ -124,4 +123,18 @@ text2.addEventListener("blur", function() {
     }
     var wyn = document.querySelector('#result6');
     wyn.innerHTML = '<h3><b>Ilość znaków w najdłuższym słowie</b> :' + max + '</h3>';
+}, true);
+
+/*
+task8: Дан инпут. В него вводится дата в формате 31.12.2016. По потери фокуса в этом же инпуте поставьте эту дату в формате 2016-12-31
+*/
+var date = document.querySelector(".input10");
+date.addEventListener("blur", function() {
+    var dt = date.value;
+    //console.log(dt);
+    dt = dt.split('.');
+    dt = dt.reverse();
+    date2 = dt.join('-');
+    //console.log(date2);
+    date.value = date2;
 }, true);
