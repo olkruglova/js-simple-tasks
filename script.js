@@ -100,3 +100,28 @@ text.addEventListener("blur", function() {
     var wyn = document.querySelector('#result5');
     wyn.innerHTML = '<h3><b>Ilość słów w tekście</b>: ' + res +'</h3>';
 }, true);
+
+/*
+task7: Дан инпут. В него вводится текст. По потери фокуса узнайте количество символов в самом длинном слове в этом тексте.
+*/
+var text2 = document.querySelector(".input9");
+text2.addEventListener("blur", function() {
+    var txt = text2.value;
+    txt = txt.split(' ');
+    console.log(txt);
+    var longestWord;
+    var max = 0;
+    for(var i=0; i<txt.length; i++){
+        var num = 0;
+        txt2 = txt[i].split('');
+        for (var j=0; j<txt2.length; j++) {
+            num += 1;
+        }
+        if (num > max){
+            max = num;
+        }
+        console.log(max);
+    }
+    var wyn = document.querySelector('#result6');
+    wyn.innerHTML = '<h3><b>Ilość znaków w najdłuższym słowie</b> :' + max + '</h3>';
+}, true);

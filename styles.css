@@ -1,4 +1,4 @@
-#task1, #task2, #task3, #task4, #task5 {
+#task1, #task2, #task3, #task4, #task5, #task6 {
     margin-left: 20px;
 }
 hr {
@@ -13,4 +13,8 @@ textarea {
 }
 .name, .name-output1, .name-output2{
     display: inline;
+}
+
+#footer {
+    margin-top: 100px;
 }
