@@ -239,3 +239,13 @@ btn8.onclick = function func() {
     sort.value = wyn;
 
 }
+/*
+task15: Даны ссылки. По загрузке страницы добавьте в конец каждой ссылки ее href в круглых скобках
+*/
+function myFunction(){
+    var links = document.getElementsByTagName('a');
+    console.log(links);
+    for (i=0;i<links.length;i++) {
+        links[i].innerHTML = links[i].innerHTML + '   (' +links[i].href+')';
+    }
+}
