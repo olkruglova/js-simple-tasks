@@ -191,7 +191,7 @@ btn5.onclick = function func() {
         }
 }
 /*
-Дан инпут. В него вводится число. Проверьте по вводу, что это число содержит внутри себя цифру 3
+task12: Дан инпут. В него вводится число. Проверьте по вводу, что это число содержит внутри себя цифру 3
 */
 var btn6 = document.querySelector('.btn6');
 
@@ -206,5 +206,17 @@ btn6.onclick = function func() {
         } else {
             wyn.innerHTML = '<p>Liczba <b>nie zawiera</b> cyfrę 3</p>';
         }
+    }
+}
+/*
+task13: Даны N абзацев и кнопка. По нажатию на кнопку запишите в конец каждого абзаца его порядковый номер.
+*/
+var btn7 = document.querySelector('.btn7');
+
+btn7.onclick = function func() {
+    var p = document.getElementsByClassName('akapit');
+    console.log(p);
+    for(i=0;i<p.length;i++){
+        p[i].innerHTML = p[i].innerHTML+ '<b>(akapit numer ' + (i+1) + ')';
     }
 }
