@@ -155,7 +155,7 @@ btn3.onclick = function() {
     userAge.innerHTML = '<h3><b>Twój wiek</b>: ' + age +'</h3>';
 }
 /*
-Дан инпут. В него вводится дата в формате 31.12.2016. По потери фокуса узнайте день недели (словом), который приходится на эту дату.
+task10: Дан инпут. В него вводится дата в формате 31.12.2016. По потери фокуса узнайте день недели (словом), который приходится на эту дату.
 */
 var btn4 = document.querySelector('.btn4');
 
@@ -173,3 +173,20 @@ btn4.onclick = function func() {
 	var p = document.getElementById('result8');
 	p.innerHTML = dayWeak[day];
 }
+/*
+task11: Дан инпут. В него вводится слово. По нажатию на кнопку проверьте то, что это слово читается с начала и с конца одинаково (например, мадам).
+*/
+var btn5 = document.querySelector('.btn5');
+
+btn5.onclick = function func() {
+    var slowo = document.querySelector('.input13').value;
+    var wyn = document.getElementById('result9');
+    console.log(slowo);
+    var slowoRev = slowo.split('').reverse().join('');
+    console.log(slowoRev);
+        if(slowo == slowoRev) {
+            wyn.innerHTML = '<p><b>To jest słowo palindrom</b></p>';
+        } else {
+            wyn.innerHTML = '<p>To <b>nie jest</b> słowo palindrom</p>';
+        }
+    }
