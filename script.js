@@ -220,3 +220,22 @@ btn7.onclick = function func() {
         p[i].innerHTML = p[i].innerHTML+ '<b>(akapit numer ' + (i+1) + ')';
     }
 }
+/*
+task14: Даны N абзацев с числами. По нажатию на кнопку выведите эти числа в инпут через запятую в порядке возрастания.
+*/
+var btn8 = document.querySelector('.btn8');
+var sort = document.querySelector('.input15');
+btn8.onclick = function func() {
+    var p = document.getElementsByClassName('ak');
+    var pText = [];
+    for (i=0; i<p.length;i++) {
+        var arr = p[i].innerHTML.split(', ');
+        pText += ',' + arr;
+    }
+    pText = pText.split(',');
+    var wyn = pText.sort(function(a, b) {
+        return a - b;
+    });
+    sort.value = wyn;
+
+}
