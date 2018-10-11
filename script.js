@@ -189,4 +189,22 @@ btn5.onclick = function func() {
         } else {
             wyn.innerHTML = '<p>To <b>nie jest</b> słowo palindrom</p>';
         }
+}
+/*
+Дан инпут. В него вводится число. Проверьте по вводу, что это число содержит внутри себя цифру 3
+*/
+var btn6 = document.querySelector('.btn6');
+
+btn6.onclick = function func() {
+    var number = document.querySelector('.input14').value;
+    var wyn = document.getElementById('result10');
+    number = number.split('');
+    console.log(number);
+    for(i=0;i<number.length;i++){
+        if(number[i] == 3) {
+            wyn.innerHTML = '<p><b>Liczba zawiera cyfrę 3</b></p>';
+        } else {
+            wyn.innerHTML = '<p>Liczba <b>nie zawiera</b> cyfrę 3</p>';
+        }
     }
+}
