@@ -138,3 +138,19 @@ date.addEventListener("blur", function() {
     //console.log(date2);
     date.value = date2;
 }, true);
+
+/*
+task9: Дан инпут. В него вводится год рождения пользователя. По нажатию на кнопку выведите в абзац ниже сколько пользователю лет. 
+*/
+var btn3 = document.querySelector('.btn3');
+
+btn3.onclick = function() {
+    var date = document.querySelector('.input11').value;
+    date = parseInt(date);
+    var d = new Date();
+    var dateNow = d.getFullYear();
+    var age = dateNow - date;
+
+    var userAge = document.querySelector('#result7');
+    userAge.innerHTML = '<h3><b>Twój wiek</b>: ' + age +'</h3>';
+}
