@@ -154,3 +154,22 @@ btn3.onclick = function() {
     var userAge = document.querySelector('#result7');
     userAge.innerHTML = '<h3><b>Twój wiek</b>: ' + age +'</h3>';
 }
+/*
+Дан инпут. В него вводится дата в формате 31.12.2016. По потери фокуса узнайте день недели (словом), который приходится на эту дату.
+*/
+var btn4 = document.querySelector('.btn4');
+
+btn4.onclick = function func() {
+    var dayWeak = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
+    //var month = ['January', 'Fabruary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var date = document.querySelector('.input12').value;
+    var arr = date.split('.');
+    console.log(arr);
+	var arr2 = arr.reverse();
+    var str1 = arr2.join(',')
+    console.log(str1);
+	var date1 = new Date(str1);
+	var day = date1.getDay();
+	var p = document.getElementById('result8');
+	p.innerHTML = dayWeak[day];
+}
