@@ -249,3 +249,27 @@ function myFunction(){
         links[i].innerHTML = links[i].innerHTML + '   (' +links[i].href+')';
     }
 }
+/*
+task16: Даны ссылки. По загрузке страницы, если ссылка начинается с http://, то добавьте ей в конец стрелку →
+*/
+function arrow (){
+    var links = document.getElementsByTagName('a');
+    console.log(links);
+    for (i=0;i<links.length;i++) {
+        if (links[i].href.indexOf('http://') == 0) {
+            links[i].innerHTML = links[i].innerHTML + ' &rarr';
+        }
+    }
+};
+/*
+task17: Даны N абзацев с числами. По нажатию на любой абзац запишите в него квадрат числа, которое в нем находится.
+*/
+var liczba = document.getElementsByTagName('h5');
+console.log(liczba);
+
+for (i=0;i<liczba.length;i++){
+    console.log(liczba[i].innerHTML);
+    liczba[i].addEventListener('click', function () {
+        this.innerHTML = this.innerHTML*this.innerHTML;
+    })
+}
