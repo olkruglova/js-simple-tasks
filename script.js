@@ -292,3 +292,35 @@ function reback() {
 	this.removeEventListener('click', reback);
 	this.addEventListener('click', func);
 }
+/*
+task19: Даны N картинок размера 30px. По нажатию на картинку под ними эта картинка появляется размером в 50px.
+*/
+var elem = document.getElementsByClassName('smaller');
+var biggerElem = document.getElementById('task19');
+for (var i = 0; i < elem.length; i++){
+	elem[i].addEventListener('click', func);
+}
+
+function func() {
+	var bigImg = document.getElementById('task');
+	bigImg.src = this.src;
+}
+/*
+task20: Дан инпут. Реализуйте кнопочки +1, -1, которые будут увеличивать или уменьшать на 1 значение инпута. Сделайте так, чтобы это значение не могло стать меньше нуля.
+*/
+var btn9 = document.querySelector('.btn9');
+var btn10 = document.querySelector('.btn10');
+var re = document.querySelector('.input20');
+var rek = 0;
+btn9.onclick = function(){
+    rek += 1;
+    re.value = rek;
+}
+btn10.onclick = function(){
+    if (re.value > 0) {
+        rek -= 1;
+        re.value = rek;
+    } else {
+        re.value = 0;
+    }
+}

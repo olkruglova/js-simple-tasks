@@ -1,5 +1,4 @@
-#task1, #task2, #task3, #task4, #task5, #task6, #task7,
-#task8, #task9, #task10, #task11, #task12, #task13, #task14 {
+div {
     margin-left: 20px;
 }
 hr {
@@ -26,8 +25,16 @@ textarea {
 .akap {
     display: inline-block;
 }
+.akap:hover {
+    cursor: pointer;
+}
 .small {
     margin-right: 35px;
     display: inline-block;
     width: 200px;
+}
+.smaller {
+    margin-right: 25px;
+    display: inline-block;
+    width: 30px;
 }
