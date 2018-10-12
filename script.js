@@ -273,3 +273,22 @@ for (i=0;i<liczba.length;i++){
         this.innerHTML = this.innerHTML*this.innerHTML;
     })
 }
+/*
+task18: Даны картинки. По нажатию на любую картинку увеличьте ее в 2 раза
+*/
+var elem = document.getElementsByClassName('small');
+for (var i = 0; i < elem.length; i++){
+	elem[i].addEventListener('click', func);
+}
+
+function func() {
+	this.style.width = this.style.width = '350px';
+	this.removeEventListener('click', func);
+	this.addEventListener('click', reback);
+}
+
+function reback() {
+	this.style.width = this.style.width = '200px';
+	this.removeEventListener('click', reback);
+	this.addEventListener('click', func);
+}

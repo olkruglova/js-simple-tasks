@@ -26,3 +26,8 @@ textarea {
 .akap {
     display: inline-block;
 }
+.small {
+    margin-right: 35px;
+    display: inline-block;
+    width: 200px;
+}
